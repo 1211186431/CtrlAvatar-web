@@ -59,7 +59,52 @@ Model">
   <script src="./style/index.js"></script>
 <style type="text/css">.ViewSDK_hideOverflow {
         overflow: hidden;
-    }</style><style type="text/css">.ViewSDK_parentRelativeWidth {
+    }</style>
+<style>
+  .carousel-container {
+      max-width: 1300px; /* 根据视频的大小调整最大宽度 */
+      margin: auto; /* 自动边距，用于水平居中 */
+      position: relative; /* 相对定位，为按钮定位提供参考 */
+      display: flex; /* 使用弹性盒子模型来提供强大的布局能力 */
+      justify-content: center; /* 水平居中显示 */
+      align-items: center; /* 垂直居中显示 */
+      overflow: hidden; /* 隐藏溢出的内容，防止超出边界的内容显示出来 */
+  }
+
+  video {
+      display: none; /* 初始状态下不显示所有视频 */
+      width: 100%; /* 视频宽度占满容器宽度 */
+      height: auto; /* 高度自动，保持视频的原始宽高比 */
+      vertical-align: middle; /* 对齐方式为中部对齐，可以去除底部的空隙 */
+      border: none; /* 确保视频本身不显示边框 */
+      outline: none; /* 消除轮廓线 */
+  }
+
+  video.active {
+      display: block; /* 显示当前活跃的视频 */
+  }
+
+  .button.is-large {
+      position: absolute; /* 绝对定位，相对于最近的相对定位的祖先元素 */
+      top: 50%; /* 位于容器的中央高度 */
+      transform: translateY(-50%); /* 向上平移自身高度的50%，以确保完全居中 */
+      border: none; /* 消除按钮的边框 */
+      outline: none; /* 消除按钮的轮廓线 */
+      z-index: 10;
+  }
+
+  .previous {
+      left: 10px; /* 左按钮的水平位置 */
+  }
+
+  .next {
+      right: 10px; /* 右按钮的水平位置 */
+  }
+</style>
+
+
+    
+    <style type="text/css">.ViewSDK_parentRelativeWidth {
         width: 100%;
     }</style><style type="text/css">.ViewSDK_viewportRelativeWidth {
         width: 100vw;
@@ -131,6 +176,8 @@ Model">
         100% { transform: rotate(360deg); }
     }</style></head>
 <body data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
+
+
 
 
 <section class="publication-header">
@@ -234,28 +281,43 @@ Model</h1>
 </section>
 
 
-<section class="section hero is-small">
-  <!-- <div class="container is-max-desktop"> -->
-      <div class="container">
-        <div class="column is-centered has-text-centered">
-          <video poster="" id="tree" autoplay="" controls="" muted="" loop="" height="100%">
-            <source src="./static/demo1.mp4" type="video/mp4">
+
+
+
+<section class="hero is-small">
+  <div class="container">
+      <h1 class="title has-text-centered">Demo</h1>
+      <div class="carousel-container">
+          <button class="button is-large previous" onclick="changeVideo(-1)">&#10094;</button>
+          <video class="active" controls autoplay loop muted>
+              <source src="./static/demo1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
           </video>
-        </div>
+          <video controls autoplay loop muted>
+              <source src="./static/demo2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <video controls autoplay loop muted>
+              <source src="./static/demo3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <button class="button is-large next" onclick="changeVideo(1)">&#10095;</button>
       </div>
-      <div class="columns is-centered has-text-centered">
-        <!-- <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-            <p>
-              Our MCM-LDM can effectively transfer the style of style motion to the content motion while ensuring the accuracy of the original content and trajectory.
-            </p>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  <!-- </div> -->
+  </div>
 </section>
 
+<script>
+  let currentVideoIndex = 0;
+  const videos = document.querySelectorAll('video');
+
+  function changeVideo(direction) {
+      videos[currentVideoIndex].pause();  // Pause the current video
+      videos[currentVideoIndex].classList.remove('active'); // Hide current video
+      currentVideoIndex = (currentVideoIndex + direction + videos.length) % videos.length; // Calculate the new index
+      videos[currentVideoIndex].classList.add('active'); // Show the new video
+      videos[currentVideoIndex].play();  // Play the new video
+  }
+</script>
 
 
 <section class="section hero is-small">
