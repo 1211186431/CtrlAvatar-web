@@ -88,9 +88,19 @@ Model">
       position: absolute; /* 绝对定位，相对于最近的相对定位的祖先元素 */
       top: 50%; /* 位于容器的中央高度 */
       transform: translateY(-50%); /* 向上平移自身高度的50%，以确保完全居中 */
+      font-size: 1.5rem; /* 字体大小 */
+      height: 50px; /* 按钮高度 */
+      width: 50px; /* 按钮宽度 */
+      line-height: 50px; /* 行高，确保图标垂直居中 */
+      color: rgb(8, 8, 8); /* 图标颜色 */
+      background-color: #fafcfc; /* 背景颜色 */
       border: none; /* 消除按钮的边框 */
       outline: none; /* 消除按钮的轮廓线 */
       z-index: 10;
+      border-radius: 25px; /* 圆形按钮 */
+      cursor: pointer; /* 指示可点击 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.541); /* 添加阴影效果 */
+      transition: background-color 0.3s, box-shadow 0.3s; /* 过渡动画 */
   }
 
   .previous {
