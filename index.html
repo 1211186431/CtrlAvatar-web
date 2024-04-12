@@ -260,61 +260,100 @@ Model</h1>
  <!--  </div> -->
 </section>
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-          
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Computer animation's quest to bridge content and style has historically been a challenging venture, with previous efforts often leaning toward one at the expense of the other. This paper tackles the inherent challenge of content-style duality, ensuring a harmonious fusion where the core narrative of the content is both preserved and elevated through stylistic enhancements. We propose a  novel Multi-condition Motion Latent Diffusion Model (MCM-LDM) for Arbitrary Motion Style Transfer (AMST). Our MCM-LDM significantly emphasizes preserving trajectories, recognizing their fundamental role in defining the essence and fluidity of motion content. Our MCM-LDM's cornerstone lies in its ability first to disentangle and then intricately weave together motion's tripartite components: motion trajectory, motion content, and motion style. The critical insight of MCM-LDM  is to embed multiple conditions with distinct priorities. The content channel serves as the primary flow, guiding the overall structure and movement, while the trajectory and style channels act as auxiliary components and synchronize with the primary one dynamically. This mechanism ensures that multi-conditions can seamlessly integrate into the main flow, enhancing the overall animation without overshadowing the core content. Empirical evaluations underscore the model's proficiency in achieving fluid and authentic motion style transfers, setting a new benchmark in the realm of computer animation.          </p>
+
+<section class="section hero is-small">
+  <!-- <div class="container is-max-desktop"> -->
+      <div class="container">
+        <div class="column is-centered has-text-centered">
+          <video poster="" id="tree" autoplay="" controls="" muted="" loop="" height="100%">
+            <source src="./static/demo1.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-
-
-
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-       
-      <div class="column is-centered has-text-centered">
-           <h2 class="title is-3">Method</h2>
-        <img src="./fig/pipeline.png" alt="cars peace">
-              <p>
-                  Our approach achieves Arbitrary Motion Style Transfer (AMST) by utilizing motion content, style, and trajectory as guiding conditions in the denoising process of our MCM-LDM. Our method begins with the extraction and encoding of these conditions using our Multi-condition Extraction module. To generate stylized motion guided by content, trajectory, and style conditions, we introduce our MCM-LDM, a motion latent diffusion model optimized for multi-condition guidance.
-              </p>
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              Our MCM-LDM can effectively transfer the style of style motion to the content motion while ensuring the accuracy of the original content and trajectory.
+            </p>
           </div>
-     
-    
-  </div>
-</div>
-
+        </div> -->
+      </div>
+    </div>
+  <!-- </div> -->
 </section>
 
 
 
 <section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
+  <!-- <div class="container is-max-desktop"> -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Acknowledgements</h2>
-        <div class="content has-text-justified">
-          <p>
-            This paper is supported by Beijing Natural Science Foundation (L232102, 4222024), National Natural Science Foundation of China (62102036, 62272021, 62172246), R&D Program of Beijing Municipal Education Commission (KM202211232003), Beijing Science and Technology Plan Project Z231100005923039, National Key R&D Program of China (No. 2023YFF1203803), the Youth Innovation and Technology Support Plan of Colleges and Universities in Shandong Province (2021KJ062), USA NSF IIS-1715985 and USA NSF IIS-1812606 (awarded to Hong QIN).          </p>
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+        </div>
+    </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              Computer animation's quest to bridge content and style has historically been a challenging venture, with previous efforts often leaning toward one at the expense of the other. This paper tackles the inherent challenge of content-style duality, ensuring a harmonious fusion where the core narrative of the content is both preserved and elevated through stylistic enhancements. We propose a  novel Multi-condition Motion Latent Diffusion Model (MCM-LDM) for Arbitrary Motion Style Transfer (AMST). Our MCM-LDM significantly emphasizes preserving trajectories, recognizing their fundamental role in defining the essence and fluidity of motion content. Our MCM-LDM's cornerstone lies in its ability first to disentangle and then intricately weave together motion's tripartite components: motion trajectory, motion content, and motion style. The critical insight of MCM-LDM  is to embed multiple conditions with distinct priorities. The content channel serves as the primary flow, guiding the overall structure and movement, while the trajectory and style channels act as auxiliary components and synchronize with the primary one dynamically. This mechanism ensures that multi-conditions can seamlessly integrate into the main flow, enhancing the overall animation without overshadowing the core content. Empirical evaluations underscore the model's proficiency in achieving fluid and authentic motion style transfers, setting a new benchmark in the realm of computer animation.          </p>
+            
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-  </div>
+  <!-- </div> -->
+</section>
+
+
+
+
+
+
+<section class="section hero is-small">
+  <!-- <div class="container is-max-desktop"> -->
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+        </div>
+    </div>
+      <div class="container">
+        <div class="column is-centered has-text-centered">
+          <img src="./fig/pipeline_page-0001.jpg" alt="cars peace" >
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              Our approach achieves Arbitrary Motion Style Transfer (AMST) by utilizing motion content, style, and trajectory as guiding conditions in the denoising process of our MCM-LDM. Our method begins with the extraction and encoding of these conditions using our Multi-condition Extraction module. To generate stylized motion guided by content, trajectory, and style conditions, we introduce our MCM-LDM, a motion latent diffusion model optimized for multi-condition guidance.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</section>
+
+
+<section class="section hero is-small">
+  <!-- <div class="container is-max-desktop"> -->
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Acknowledgements</h2>
+        </div>
+    </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              This paper is supported by Beijing Natural Science Foundation (L232102, 4222024), National Natural Science Foundation of China (62102036, 62272021, 62172246), R&D Program of Beijing Municipal Education Commission (KM202211232003), Beijing Science and Technology Plan Project Z231100005923039, National Key R&D Program of China (No. 2023YFF1203803), the Youth Innovation and Technology Support Plan of Colleges and Universities in Shandong Province (2021KJ062), USA NSF IIS-1715985 and USA NSF IIS-1812606 (awarded to Hong QIN).  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
 </section>
 
 
