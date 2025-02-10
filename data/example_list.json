@@ -1,0 +1,53 @@
+[
+    {
+      "name": "00017",
+      "image": "./examples/00017.png",
+      "model": "./examples/00017.glb"
+    },
+    {
+      "name": "00122",
+      "image": "./examples/00122.png",
+      "model": "./examples/00122.glb"
+    },
+    {
+      "name": "00020",
+      "image": "./examples/00020.png",
+      "model": "./examples/00020.glb"
+    },
+    {
+      "name": "00024",
+      "image": "./examples/00024.png",
+      "model": "./examples/00024.glb"
+    },
+    {
+      "name": "00027",
+      "image": "./examples/00027.png",
+      "model": "./examples/00027.glb"
+    },
+    {
+      "name": "00028",
+      "image": "./examples/00028.png",
+      "model": "./examples/00028.glb"
+    },
+    {
+      "name": "00058",
+      "image": "./examples/00058.png",
+      "model": "./examples/00058.glb"
+    },
+    {
+      "name": "00070",
+      "image": "./examples/00070.png",
+      "model": "./examples/00070.glb"
+    },
+    {
+      "name": "00080",
+      "image": "./examples/00080.png",
+      "model": "./examples/00080.glb"
+    },
+    {
+      "name": "00087",
+      "image": "./examples/00087.png",
+      "model": "./examples/00087.glb"
+    }
+  ]
+  

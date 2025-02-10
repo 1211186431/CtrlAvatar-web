@@ -56,6 +56,19 @@
   <script src="./style/bulma-carousel.min.js"></script>
   <script src="./style/bulma-slider.min.js"></script>
   <script src="./style/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/examples/js/loaders/GLTFLoader.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+        "three/controls/OrbitControls": "https://unpkg.com/three@0.156.1/examples/jsm/controls/OrbitControls.js",
+        "three/libs/stats": "https://unpkg.com/three@0.156.1/examples/jsm/libs/stats.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <style type="text/css">.ViewSDK_hideOverflow {
         overflow: hidden;
     }</style>
@@ -307,7 +320,7 @@
         </div>
     </div>
     <div class="column is-centered has-text-centered">
-      <img src="./fig/teaser.png" width="40%">
+      <img src="./fig/teaser.png" width="50%">
     </div>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -376,21 +389,33 @@ By optimizing transformations with position-varying offsets from the avatar’s 
     <div class="container">
       <div class="carousel-container">
           <video class="active" poster="" id="g_87" controls="" muted="" loop="">
-              <source src="./static/00087.mp4" type="video/mp4">
+              <source src="./static/comp_geo.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
       </div>
       <div class="carousel-container">
         <video class="active" poster="" id="t_87" controls="" muted="" loop="">
-            <source src="./static/00017.mp4" type="video/mp4">
+            <source src="./static/comp_tex.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
       </div>
+      <div class="carousel-container">
+        <video class="active" poster="" id="edit_20" controls="" muted="" loop="">
+            <source src="./static/edit_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     </div>
   </div>
 </section>
 
-
+<br><h2 class="title is-3 is-centered has-text-centered">More Results</h2>
+<div class="container">
+<div class="tuple-container">
+</div>
+</div>
+<!-- <div class="tuple-container"></div>
+<div class="pagination-container" style="text-align: center; margin-top: 20px;"></div> -->
 
 <section class="section hero is-small">
   <!-- <div class="container is-max-desktop"> -->
@@ -495,7 +520,7 @@ By optimizing transformations with position-varying offsets from the avatar’s 
 
 </footer>
 
-
+  <script src="./style/load_results.js"></script>
   <script type="text/javascript">
     var sc_project=12351448; 
     var sc_invisible=1; 
